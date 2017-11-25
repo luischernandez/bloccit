@@ -21,6 +21,16 @@ group :development do
     gem 'sqlite3'
 end
 
+group :development do
+    gem 'listen', '~> 3.0.5'
+    gem 'pry-rails'
+end
+
+group :development, :test do
+    gem 'rspec-rails','~> 3.0'
+    gem 'rails-controller-testing'
+end
+
 # use puma as the app server
 gem 'puma', '~> 3.0'
 #use scss for stylesheets
@@ -36,14 +46,5 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'thor', '0.20.0'
-
-group :development do
-    gem 'listen', '~> 3.0.5'
-end
-
-group :development, :test do
-    gem 'rspec-rails','~> 3.0'
-    gem 'rails-controller-testing'
-end
 
 gem 'bootstrap-sass'
