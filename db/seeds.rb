@@ -16,6 +16,8 @@ posts = Post.all
     )
 end
 
+Post.find_or_create_by(title: "This title should not repeat", body: "This body should not repeat")
+
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
