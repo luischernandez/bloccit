@@ -13,9 +13,9 @@ class AdvertisementsController < ApplicationController
 
   def create
       @advertisements = Advertisement.new
-      @advertisements.title = params[:advertisement][:title]
-      @advertisements.copy = params[:advertisement][:copy]
-      @advertisements.price = params[:advertisement][:price]
+      @advertisements.title = params[:advertisements][:title]
+      @advertisements.copy = params[:advertisements][:copy]
+      @advertisements.price = params[:advertisements][:price]
 
       if @advertisements.save
           flash[:notice] = "Your ad was saved."
