@@ -1,0 +1,9 @@
+<h1>Advertisements Index</h1>
+<h2>
+    <% @advertisements.each do |a| %>
+    <div>
+        <%= link_to "#{a.title}", a%>
+        <% end %>
+    </div>
+
+</h2>

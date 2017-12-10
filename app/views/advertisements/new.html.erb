@@ -1,0 +1,26 @@
+<h1>Create your new ad here</h1>
+<div class="row">
+    <div class="col-md-4">
+        <p>Guidelines for ads:</p>
+        <ul>
+            <li>Keep it clean and family friendly.</li>
+            <li>Do not be sleazy.</li>
+            <li>If it looks like one of those windows saying "Your computer is infected", you will be banned!!</li>
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <%= form_for @advertisements do |a| %>
+            <div class="form-group">
+                <%= a.label :title %>
+                <%= a.text_field :title, class: 'form-control', placeholder: "Enter ad title" %>
+            </div>
+            <div class="form-group">
+                <%= a.label :copy %>
+                <%= a.text_area :copy, rows: 8, class: 'form-control', placeholder: "Write your copy" %>
+            </div>
+            <div class="form-group">
+                <%= a.submit "Save", class: 'btn btn-success' %>
+            </div>
+            <% end %>
+    </div>
+</div>
