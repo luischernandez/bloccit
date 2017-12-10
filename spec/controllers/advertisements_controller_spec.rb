@@ -38,16 +38,16 @@ end
 
   describe "Ad create" do
       it "increases the number of ads by 1" do
-          expect{ post :create, params: {advertisements: {title: "Test title", copy: "Some random copy text", price: 100}}}.to change(Advertisement,:count).by(1)
+          expect{ post :create, params: {advertisement: {title: "Test title", copy: "Some random copy text", price: 100}}}.to change(Advertisement,:count).by(1)
       end
 
       it "assigns the new advertisement to @advertisements" do
-        post :create, params: {advertisements: {title: "Test title", copy: "Some random copy text", price: 100}}
-        expect(assigns(:advertisements)).to eq Advertisement.last
+        post :create, params: {advertisement: {title: "Test title", copy: "Some random copy text", price: 100}}
+        expect(assigns(:advertisement)).to eq Advertisement.last
       end
 
       it "redirects to the new ad" do
-          post :create, params: {advertisements: {title: "Test title", copy: "Some random copy text", price: 100}}
+          post :create, params: {advertisement: {title: "Test title", copy: "Some random copy text", price: 100}}
           expect(response).to redirect_to Advertisement.last
       end
   end
