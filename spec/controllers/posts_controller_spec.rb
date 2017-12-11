@@ -66,7 +66,7 @@ RSpec.describe PostsController, type: :controller do
     end
 
     describe "GET edit" do
-        it "returng http success" do
+        it "returns http success" do
             get :edit, params: { id: my_post.id }
             expect(response).to have_http_status(:success)
         end
@@ -117,7 +117,7 @@ RSpec.describe PostsController, type: :controller do
         it "redirects to posts index" do
             delete :destroy, params: {id: my_post.id}
             expect(response).to redirect_to posts_path
-        end 
+        end
     end
 
 end
